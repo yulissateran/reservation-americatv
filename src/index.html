@@ -5,17 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>reserva Publicitaria</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <form>
+    <div class="container d-flex h-100">
+        <div class="row align-self-center w-100">
+          <div class="col-8 mx-auto">
+            <div class="jumbotron">
+                <form>
+                    <div class="input-group ">
+                        <select class="custom-select" id="producto">
+                          <option selected>Nombre del producto</option>
+                          <option value="1" id="producto">Coca cola </option>
+                          <option value="2">sprite</option>
+                        </select>
+                      </div> 
+                      <br>
+                    <div class="form-group ">
+                      <input type="date" name="fecha" id="fecha">
+                    </div>
+                    <div class="form-group ">
+                        <input type="time" name="hora" id="hora">
+                      </div>
+                    <button type="submit" id="btnreserva" class="btn btn-primary">Revisar reserva</button>
+                  </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    
+
+  <!-- <form>
     <input type="text" placeholder="Ingrese nombre de la agencia" id="nombreAgencia">
     <input type="text" name="producto" id="producto" placeholder="Ingrese nombre del producto ">
     <input type="date" name="fecha" id="fecha">
     <input type="time" name="hora" id="hora">
     <button id="btnreserva"> Revisar reserva</button>
-  </form>
+  </form> -->
 
   <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
   <script src="./model/call-firebase.js"></script>
