@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <input type="text" placeholder="Ingrese nombre de la agencia" id="nombreAgencia">
+    <input type="text" name="producto" id="producto" placeholder="Ingrese nombre del producto ">
+    <input type="date" name="fecha" id="fecha">
+    <input type="time" name="hora" id="hora">
+    <button id="btnreserva"> Revisar reserva</button>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+  <script src="./model/call-firebase.js"></script>
+  <script src="controller/index.js"></script>
+</body>
+
+</html>
