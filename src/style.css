@@ -2,10 +2,10 @@ body{
   background-image: url("../img/background.png");
 }
 .bg-main {
-  background-color: #fffffff8;
+  background-color: #ffffff;
 }
 .header {
-background-color: #fffffff8;
+background-color: #ffffff;
 opacity: 0.1;
 }
 body,html {
@@ -21,4 +21,10 @@ body,html {
 .paso2{
   color: #000000;
   /* font-weight: normal; */
+}
+.btn btn-secondary{
+  color: #ff5000;
+}
+.container-fluid{
+  margin-top: 200px;
 }

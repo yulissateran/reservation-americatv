@@ -5,33 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>reserva Publicitaria</title>
+  <title>Espacio América</title>
+  <link rel="shortcut icon" href="../img/logotransparente.png" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body >
-  <header class="bg-main p-2 fixed-top" class="header">
+  <header class="bg-main p-2 fixed-top" class="header">   
+  <p align = "center"><img src="../img/paso2.png" class="imgpaso2"></p>
   <h5 class="paso2">2. Escoge las fechas y los espacios de tiempo que deseas reservar (puedes escoger más de uno)</h5>  
   <button type="button" class="btn btn-review text-white btn-lg"data-toggle="modal" data-target=".bd-example-modal-lg" class="d-flex align-content-sm-center">Revisar reservas</button>
 
   </header>
 
-  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-    aria-hidden="true" id="btnModal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content"><h3>Reservas</h3></div>
-      <div class="modal-content" id="modalBody">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary">Save changes</button>
-      </div>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="btnModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" id="modalBody">
+      
+    </div>
+    <div class="modal-footer">
+      <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+      <button type="button" class="btn btn-secondary">Confirmar Reserva</button>
     </div>
   </div>
 
 
-  <div class="container-fluid">
+  <div class="container-fluid" class="calendario">
     <div class="row my-5" id="body"></div>
     <div class="row d-flex justify-content-center">
       <div class="col-md-11">
