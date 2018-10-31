@@ -18,11 +18,11 @@ const updateStarCount = (snap) => {
   const stringOption = arrayPubli.join('');
   const select = `<select id="intervals">${stringOption}</select>`;
 
-     return  ` <li class="list-group-item" data-dia="${item}" data-index="${index}" data-programa="${element.programa}"  
+     return  ` <li class="list-group-item " data-dia="${item}" data-index="${index}" data-programa="${element.programa}"  
       class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
-      <div class=" bd-highlight mb-3">
-        <div class="mr-auto p-2 bd-highlight ">${element.programa}</div>
-        <div class="p-2 bd-highlight">
+      <div class=" bd-highlight ">
+        <div class="mr-auto bd-highlight ">${element.programa}</div>
+        <div class="bd-highlight">
           <p class="card-text">
             <small class="text-muted">${element.time}</small>
           </p>
@@ -36,14 +36,14 @@ const updateStarCount = (snap) => {
     </li>`
     });
     
-    programa.innerHTML += `  <div class="col-12 col-md-3 mt-2">
+    programa.innerHTML += `  <div class="col-12 col-md-2 mt-2 my-0">
   <div class="row">  
-  <div class="col-12 ">
-  <h1 class="bg-dark text-white rounded text-center"> ${item}</h1>
+  <div class="col-12 p-0 bg-dark text-white text-center  border-r">
+  <h3 class=""> ${item}</h3>
   </div>
   </div>
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 p-0">
     <ul class="list-group">${arrayTemplateProgramming.join('')} 
   </ul>
    </div>
