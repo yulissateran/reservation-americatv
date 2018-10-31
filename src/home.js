@@ -6,14 +6,14 @@ buttonRegisterForm.addEventListener('click', () => {
     loginform.style.display = 'none';
 })
 // register
-const userName = document.querySelector('.userName');
-const userEmail = document.querySelector(".userEmail");
-const userPassword = document.querySelector(".userPassword");
-const buttonRegister = document.querySelector(".buttonRegister");
+// const userName = document.getElementById('.userName');
+const userEmail = document.getElementById("userEmail");
+const userPassword = document.getElementById("userPassword");
+const buttonRegister = document.getElementById("registers");
 
 // login 
-const userEmailLogin = document.querySelector(".userEmailLogin");
-const userPasswordLogin = document.querySelector(".userPasswordLogin");
+const userEmailLogin = document.getElementById("userEmailLogin");
+const userPasswordLogin = document.getElementById("userPasswordLogin");
 
 const buttonLogin = document.querySelector('.buttonLogin');
 const  buttonReturn = document.getElementById('return');
@@ -28,8 +28,7 @@ buttonLogin.addEventListener('click', () => {
     const passwordValue = userPasswordLogin.value;
     firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
         .then(() => {
-            console.log('inicio sesion');
-            window.location = 'wall.html'
+            window.location = 'product.html'
         })
         .catch((error) => {
             console.log("error de firebase > Codigo > " + error.code);
@@ -37,15 +36,6 @@ buttonLogin.addEventListener('click', () => {
         });
 })
 const post = document.getElementById("list")
-
-// document.getElementById("add").onclick = function() {
-//   //First things first, we need our text:
-//   var text = document.getElementById("idea").value; //.value gets input values
-//   //Now construct a quick list element
-//   //Now use appendChild and add it to the list!
-//   // document.getElementById("list"(li);
-
-// }
 const  añadir = document.getElementById("add")
 const arrProducts =[];
 
@@ -64,7 +54,7 @@ añadir.addEventListener('click',()=>{
 
 buttonRegister.addEventListener('click', ()=> {
 registerfirebase(userEmail.value , userPassword.value , userAgencia.value , arrProducts ) 
-   
+
     // console.log(post.value); 
 })
 
@@ -81,7 +71,6 @@ const createUserInBd = (objectUser, name , productos) => {
     // if (!objectUser.user.displayName) {
       firebase.database().ref('user/' + objectUser.user.uid).set({
         userId: objectUser.user.uid,
-
         userName: name,
         userEmail: objectUser.user.email,
         productos : productos
@@ -100,14 +89,19 @@ const createUserInBd = (objectUser, name , productos) => {
     //     emailVerified: false
     //   })
     .then(() => {
-        (firebase.database().ref('/user/' + objectUser.user.uid).once('value', (snapshot) => {
-          const displayName = snapshot.val().userName;
-        //   if (displayName) {
-        //     // window.directionalUrl('../src/view/wall.html');
-        //   }
-        })
-        )
+window.location = 'product.html'
+        // (firebase.database().ref('/user/' + objectUser.user.uid).once('value', (snapshot) => {
+        //   const displayName = snapshot.val().userName;
+        // //   if (displayName) {
+        // //     // window.directionalUrl('../src/view/wall.html');
+        // //   }
+        // })
+        // )
+
+              
+
       });
+
     }
 
     // createUserInd()

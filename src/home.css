@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Skranji');
 
 /* Home html */
@@ -8,3 +9,6 @@
     display: none;
 }
 
+body,html {
+    height: 100%;
+  }
