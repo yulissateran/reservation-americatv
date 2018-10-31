@@ -15,16 +15,14 @@ body,html {
   border-right: 3px white  solid;
   /* border-style:; */
 }
+
 .btn-review {
   background-color: #ff5000;
 }
 .paso2{
   color: #000000;
-  /* font-weight: normal; */
 }
-.btn btn-secondary{
-  color: #ff5000;
-}
+
 .container-fluid{
   margin-top: 200px;
 }
