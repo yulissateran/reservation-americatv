@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,45 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body >
   <header class="bg-main p-2 fixed-top" class="header">
   <h5 class="paso2">2. Escoge las fechas y los espacios de tiempo que deseas reservar (puedes escoger más de uno)</h5>  
   <button type="button" class="btn btn-review text-white btn-lg"data-toggle="modal" data-target=".bd-example-modal-lg" class="d-flex align-content-sm-center">Revisar reservas</button>
+
   </header>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="btnModal">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content" id="modalBody">
-      
-    </div>
-    <div class="modal-footer">
-      <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-      <button type="button" class="btn btn-secondary">Save changes</button>
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true" id="btnModal">
+    <div class="modal-dialog modal-lg">
+      <!-- <div class="modal-content m-3" id="modalBody"> -->
+        <div class="container modal-content m-3">
+          <div class="row">
+            <div class="col-12  mt-5 my-0">
+              <div class="row">
+                <div class="col-2">
+                  <div class="row">
+                    <div class="col-12 p-0 bg-dark text-white text-center  border-r">
+                      <span>Fecha</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0" id="modalBody">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary">Aplicar Reserva</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Volver</button>
+      </div>
     </div>
   </div>
-</div>
+
 
   <div class="container-fluid">
     <div class="row my-5" id="body"></div>
@@ -36,22 +59,25 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
   <script src="./model/call-firebase.js"></script>
   <!-- <script src="./model/firebase-config.js"></script> -->
   <script src="controller/index.js"></script>
-  
+
 </body>
 
 </html>
 
 <!-- Button trigger modal -->
 
-  <!-- Modal -->
- 
+<!-- Modal -->
+
 <!-- <div class="container d-flex h-100">
     <div class="row align-self-center w-100">
       <div class="col-8 mx-auto">
