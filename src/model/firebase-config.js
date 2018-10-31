@@ -1,5 +1,3 @@
-
-
 // window.database.ref('horarios').set({
 //   horas: [
 //     {
