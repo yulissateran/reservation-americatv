@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+<div class="container d-flex h-100">
+  <div class="row align-self-center w-100">
+    <div class="col-6 mx-auto">
+       <button id="login" disabled>login</button> 
+        <button id="register">register</button> 
+
+<div class="jumbotron">
+  <button><i class="fas fa-arrow-circle-left"></i></button>
+    <div class="register">
+        <div class="body-index">
+          <br>
+          <a class="w3-button" id="return">
+            <i class="far fa-arrow-alt-circle-left" style="font-size:25px;"></i>
+          </a>
+
+          <h1 class="title-form">Registrate</h1>
+          <p>
+            <input type="email" placeholder=" Ingresa tu e-mail" class="userEmail">
+          </p>
+          <p>
+            <h6 id="mensajeErrorPassword"></h6>
+          </p>
+          <p>
+            <input type="password" placeholder=" Ingresa una contraseña" class="userPassword">
+          </p>
+          <p>
+            <h6 id="mensaje-error"></h6>
+          </p>
+
+          <input type="text" placeholder="ingrese su agencia" id="userAgencia">
+          <p>
+            <input type="password" placeholder=" Repita la contraseña" class="userPasswordVerification">
+          </p>
+          <input type='text' id='idea'  placeholder="ingrese sus productos"/>
+
+ <input type='button' value='add to list' id='add' placeholder="productos">
+ <ul id='list'></ul>
+          <p>
+            <button class="buttonRegister">REGISTRARSE</button>
+          </p>
+          
+        </div>
+
+        <div></div>
+      </div>
+    <!-- <div class="registerForm">
+ <input type="text" id="agencia" placeholder="ingrese su agencia">
+ <!-- <input type="text" id=""> -->
+ <!-- <br><br>
+ <input type='text' id='idea'  placeholder="ingrese sus productos"/>
+
+ <input type='button' value='add to list' id='add' placeholder="productos">
+ <ul id='list'></ul>
+
+    </div> --> 
+    <!-- iniciar sesion -->
+    <div class="login">
+      <div class="body-index">
+        <br>
+        <br>
+        <h1 class="title-form"> Inicia sesión </h1>
+        <div id="loggedOut">
+          <p>
+            <input type="email" placeholder=" Ingresa tu e-mail " class="userEmailLogin">
+          </p>
+          <p>
+            <input type="password" placeholder=" Ingresa tu contraseña" class="userPasswordLogin">
+          </p>
+          <p>
+            <button class="buttonLogin">INICIAR SESIÓN</button>
+          </p>
+          <br>
+          <P class="text-2">¿No tienes una cuenta?</P>
+          <p>
+            <button class="buttonRegisterForm">REGISTRATE</button>
+          </p>
+          <p class="text-1">o
+            <br>Ingresa con:</p>
+
+        </div>
+      </div>
+    </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+  crossorigin="anonymous"></script>
+<script src="home.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script src="./model/call-firebase.js"></script>
+</body>
+
+</html>
