@@ -93,13 +93,12 @@ const addEventSelect = elements => {
 const showDia = snap => {
   const promesa = new Promise((resolve, reject) => {
     const dias = [
-      "lunes",
-      "martes",
-      "miercoles",
       "jueves",
       "viernes",
       "sabado",
-      "domingo"
+      "domingo",
+      "lunes",
+      "martes",
     ];
     dias.forEach(item => {
       const programming = snap[item].programming;
@@ -113,6 +112,9 @@ const showDia = snap => {
             `<option value="${elem.name || elem}">${elem.name || elem}</option>`
         );
         const stringOption = arrayPubli.join("");
+        const time = element.time;
+       const number = time.slice(0,3)
+       const icon = parseInt(number);
         const select = `<select data-programa="${
           element.programa
         }" data-día="${item}" data-monto="${
@@ -125,7 +127,7 @@ const showDia = snap => {
         }"  
         class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
         <div class=" bd-highlight">
-          <div class="mr-auto bd-highlight ">${element.programa}</div>
+          <div class="mr-auto bd-highlight ">${icon > 16 ? `<i class="fas fa-star"></i>`:`<i class="far fa-star"></i>`}${element.programa}</div>
           <div class="bd-highlight">
             <p class="card-text">
               <small class="text-muted">${element.time}</small>
