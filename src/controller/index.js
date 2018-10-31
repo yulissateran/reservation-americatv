@@ -1,7 +1,20 @@
 const btnModal= document.getElementById('btnModal');
 const itemsSelects = [];
 const programa = document.getElementById("programas");
-btnModal.addEventListener('click',()=>{
+const saveItemsFirebase =()=> new Promise ((reject, resolve)=>{
+  if(itemsSelects[0]){
+    itemsSelects.forEach((elem)=>{
+    console.log(elem.ruta)
+    firebase.database().ref(elem.ruta).update({disponible: 'false', marca: infoUser.producto}) 
+  }),resolve('')}
+  
+});
+document.getElementById('saveItems').addEventListener('click',()=>{
+  saveItemsFirebase().then(()=>{
+    location.reload()
+  })
+})
+btnModal.addEventListener('click',()=> {
   const arrayItemsReservados = itemsSelects.map((elem)=>`<li class="list-group-item"><div class="d-flex bd-highlight">
   <div class="p-2 flex-fill bd-highlight">${elem.name}</div>
   <div class="p-2 flex-fill bd-highlight">${elem.programa}</div>
@@ -31,17 +44,16 @@ addInterval =()=>{
     programa: event.currentTarget.getAttribute("data-programa"),
     día:event.currentTarget.getAttribute("data-día"),
   };
-//  firebase.database().ref("programación/"+ interval.día +'/programming').on('value', (snapshot) => {
-//    const _snapshot= snapshot.val()
-//    console.log(_snapshot)
-//    _snapshot.forEach((element, i)=>{element.publicidad.forEach((elem,ind)=>{elem.name === interval.name? ruta = `${i}/publicidad/${ind}` : ruta})});
-//})
+ firebase.database().ref("programación/"+ interval.día +'/programming').on('value', (snapshot) => {
+   const _snapshot= snapshot.val()
+   console.log(_snapshot)
+   _snapshot.forEach((element, i)=>{ element.publicidad.forEach((elem,ind)=>{elem.name === interval.name? interval.ruta = `programación/${interval.día }/programming/${i}/publicidad/${ind}` : interval.ruta})});
+}),
 // firebase.database().ref("programación/"+ interval.día +'/programming/' + ruta).update({disponible: 'false', marca: infoUser.producto}) 
-// console.log('ruta',ruta)
   itemsSelects.push(interval)
   console.log('items',itemsSelects)}
 
-addEventSelect= (elements)=> { 
+const addEventSelect= (elements)=> { 
   for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener('change', addInterval, false);
   }
@@ -158,23 +170,6 @@ const showDia = snap => {
 //   console.log(document.getElementsByClassName(".interval")); // , document.getElementById().innerHTML += select;
 // };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const btnReserva = document.getElementById("btnreserva");
 // const formulario = document.getElementById("formulario");
 
@@ -202,5 +197,4 @@ const showDia = snap => {
 //   const data = snapshop.val()
 //   writeHorario(data)
 //   // console.log(snapshop.val());
-
 // } )

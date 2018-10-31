@@ -11,20 +11,25 @@
 </head>
 <body >
   <header class="bg-main p-2 fixed-top">
-  <button type="button" class="btn bg-dark text-white btn-lg"data-toggle="modal" data-target=".bd-example-modal-lg">Revisar reservaciones</button>
-  </header>
-
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="btnModal">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content" id="modalBody">
-      
-    </div>
-    <div class="modal-footer">
-      <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-      <button type="button" class="btn btn-secondary">Save changes</button>
+  <!-- <button type="button" class="btn bg-dark text-white btn-lg"data-toggle="modal" data-target=".bd-example-modal-lg" >Revisar reservaciones</button> -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="btnModal">Launch demo modal</button>
+</header>
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        </div>
+        <div class="modal-body"  id="modalBody">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" id="saveItems">Save changes</button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+
 
   <div class="container-fluid">
     <div class="row my-5" id="body"></div>
