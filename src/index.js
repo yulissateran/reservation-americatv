@@ -1,23 +1,30 @@
 const btnModal = document.getElementById("btnModal");
 const itemsSelects = [];
 const programa = document.getElementById("programas");
-const saveItemsFirebase = () =>
-  new Promise((reject, resolve) => {
-    if (itemsSelects[0]) {
+const saveItemsFirebase = () =>{
+  return new Promise((resolve, reject) => {
+    console.log(itemsSelects)
+    if (itemsSelects.length !== 0) {
+      console.log('for')
       itemsSelects.forEach(elem => {
         console.log(elem.ruta);
         firebase
           .database()
           .ref(elem.ruta)
           .update({ disponible: "false", marca: infoUser.producto });
-      }),
-        resolve("");
+      }),resolve("");
     }
-  });
+    reject('');
+  })};
 document.getElementById("saveItems").addEventListener("click", () => {
+  console.log('save')
   saveItemsFirebase().then(() => {
-    location.reload();
-  });
+    console.log('then')
+  }).catch(()=>{
+    console.log('window')
+   window.location = 'confirm.html'
+  })
+  ;
 });
 btnModal.addEventListener("click", () => {
   const arrayItemsReservados = itemsSelects.map(
