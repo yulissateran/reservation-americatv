@@ -1,8 +1,14 @@
-
 body{
+  background-color: #eee;
+}
+.bg-main {
   background-color: #FF5000
 }
 
 body,html {
   height: 100%;
+}
+.border-r {
+  border-right: 3px white  solid;
+  /* border-style:; */
 }
