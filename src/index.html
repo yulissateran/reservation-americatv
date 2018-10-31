@@ -13,37 +13,16 @@
 
 <body>
   <header class="bg-main p-2 fixed-top">
-    <button type="button" class="btn bg-dark text-white btn-lg" data-toggle="modal" data-target=".bd-example-modal-lg"
-      id="btnModal">Revisar reservaciones</button>
-  </header>
-
-  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-    aria-hidden="true" id="btnModal">
+    <button type="button" class="btn bg-dark text-white btn-lg"data-toggle="modal" id="btnModal" data-target=".bd-example-modal-lg">Revisar reservaciones</button>
+    </header>
+  
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="btnModal">
     <div class="modal-dialog modal-lg">
-      <!-- <div class="modal-content m-3" id="modalBody"> -->
-        <div class="container modal-content m-3">
-          <div class="row">
-            <div class="col-12  mt-5 my-0">
-              <div class="row">
-                <div class="col-2">
-                  <div class="row">
-                    <div class="col-12 p-0 bg-dark text-white text-center  border-r">
-                      <span>Fecha</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 p-0" id="modalBody">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="modal-content"><h3>Reservas</h3></div>
+      <div class="modal-content" id="modalBody">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary">Aplicar Reserva</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Volver</button>
+        <button type="button" class="btn btn-secondary">Save changes</button>
       </div>
     </div>
   </div>

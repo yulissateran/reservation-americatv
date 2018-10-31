@@ -1,19 +1,29 @@
 const btnModal = document.getElementById("btnModal");
 const itemsSelects = [];
 const programa = document.getElementById("programas");
-btnModal.addEventListener("click", () => {
-  const arrayItemsReservados = itemsSelects.map(
-    elem => `
-  <li class="list-group-item">${elem.name}</li>
-   `
- );
-  const templateReservas = arrayItemsReservados.join("");
-  document.getElementById("modalBody").innerHTML = "";
-  document.getElementById(
-    "modalBody"
-  ).innerHTML += `<ul class="list-group">${templateReservas}
+btnModal.addEventListener('click',()=>{
+  const arrayItemsReservados = itemsSelects.map((elem)=>
+`<li class="list-group-item">
+  <div class="d-flex bd-highlight m-1">
+    <div class="p-2 flex-fill bd-highlight">
+      <small class="text-muted">Programa: </small><br>${elem.programa}
+    </div>
+    <div class="p-2 flex-fill bd-highlight m-1">
+      <small class="text-muted">Fecha: </small><br>${elem.día}
+    </div>
+    <div class="p-2 flex-fill bd-highlight m-1">
+      <small class="text-muted">Hora: </small><br>${elem.name}
+    </div>
+    <div class="p-2 flex-fill bd-highlight m-1">
+      <small class="text-muted">Monto: </small><br>${elem.recarga}
+    </div>
+  </div>
+</li>`)
+const templateReservas= arrayItemsReservados.join('');
+document.getElementById('modalBody').innerHTML ='';
+  document.getElementById('modalBody').innerHTML += `<ul class="list-group">${templateReservas}
 </ul>`;
-});
+})
 const infoUser = {
   name: "Marcos Rojas",
   nameEmpresa: "Circus",
