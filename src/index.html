@@ -15,20 +15,45 @@
 
 <body>
   <header class="bg-main p-2 fixed-top">
+    
     <p align="center"><img src="../img/paso2.png" class="imgpaso2"></p>
-    <h5 class="paso2">2. Escoge las fechas y los espacios de tiempo que deseas reservar (puedes escoger más de uno)</h5>
-    <button type="button"  id="btnModal" class="btn btn-review text-white btn-lg" data-toggle="modal" data-target=".bd-example-modal-lg" class="d-flex align-content-sm-center">Revisar reservas</button>
+    <h5 class="paso2 text-center">2. Escoge las fechas y los espacios de tiempo que deseas reservar (puedes escoger más de uno)</h5>
+    <div class="container"><div class="row d-flex justify-content-center ">
+        <button type="button"  id="btnModal" class="mt-2 btn btn-review text-white btn-lg " data-toggle="modal" data-target=".bd-example-modal-lg" class="d-flex align-content-sm-center">Revisar reservas</button>
+
+    </div></div>
   </header>
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
     aria-hidden="true" id="btnModal">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <h3>Reservas</h3>
+        <div class="container">
+          <div class="row d-flex justify-content-center py-4">
+            <div class="col-6">
+                <figure>
+                    <img src="../img/paso3.png" alt="" class="img-responsive">  
+                </figure>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+              <h3>3. Confirma tu reserva</h3>
+          </div>
+        </div>
+       
+        
       </div>
       <div class="modal-content" id="modalBody">
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-review text-white" id="saveItems">Confirmar</button>
+      <div class="modal-footer bg-white">
+        <div class="container">
+          <div class="row  d-flex justify-content-center my-1">
+              <small class="text-muted">*Precios aproximados, para mayor detalle comuniquese con una ejecutiva de ventas una vez confirmadas las reservas</small>
+        </div>
+        <div class="row d-flex justify-content-center my-2">
+            <button type="button" class="btn btn-review text-white p-3" id="saveItems">Confirmar</button>
+
+          </div>
+      </div>   
       </div>
     </div>
   </div>
