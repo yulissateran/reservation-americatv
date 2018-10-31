@@ -53,56 +53,175 @@ window.database.ref("programación/lunes/").set({
     {
       monto: 3000,
       programa: "En Boca de Todos (repeticion)",
-      publicidad: ["2:30-2:35", "3:00-3:05"],
+      publicidad: [
+        {
+          name: "2:30-2:35",
+          monto: 3000,
+          recaga: 3450,
+          programa: "En Boca de Todos (repeticion)",
+          día: "05/11",
+          disponible: true
+        },
+        {
+          name: "3:00-3:05",
+          monto: 3000,
+          recaga: 3450,
+          programa: "En Boca de Todos (repeticion)",
+          día: "05/11",
+          disponible: true
+        }
+      ],
       recarga: 3450,
       time: "02:30 - 03:30"
     },
     {
       monto: 1000,
       programa: "El Privilegio de Amar",
-      publicidad: ["3:30-3:35", "4:00-4:05"],
+      publicidad: [
+        {
+          name: "3:30-3:35",
+          monto: 1000,
+          recaga: 1150,
+          programa: "El Privilegio de Amar",
+          día: "05/11",
+          disponible: true
+        },
+        {
+          name: "4:00-4:05",
+          monto: 1000,
+          recaga: 1150,
+          programa: "El Privilegio de Amar",
+          día: "05/11",
+          disponible: true
+        }
+      ],
       recarga: 1150,
       time: "03:30 - 04:30"
     },
     {
       monto: 2500,
       programa: "América Espectáculos (repeticion)",
-      publicidad: ["4:30-4:35", "5:00-5:05"],
+      publicidad: [
+        {
+          name: "4:30-4:35",
+          monto: 2500,
+          recaga: 2875,
+          programa: "América Espectáculos (repeticion)",
+          día: "05/11",
+          disponible: true
+        },
+        {
+          name: "5:00-5:05",
+          monto: 2500,
+          recaga: 2875,
+          programa: "América Espectáculos (repeticion)",
+          día: "05/11",
+          disponible: true
+        }
+      ],
       recarga: 2875,
       time: "04:30 - 05:30"
     },
     {
       monto: 4000,
       programa: "America Noticias: Primera Edición: Local",
-      publicidad: ["5:30-5:35", "6:00-6:05", "6:30-6:35"],
+      publicidad: [
+        {
+          name: "5:30-5:35",
+          monto: 4000,
+          recaga: 4600,
+          programa: "America Noticias: Primera Edición: Local",
+          día: "05/11",
+          disponible: true
+        },
+        {
+          name: "6:00-6:05",
+          monto: 4000,
+          recaga: 4600,
+          programa: "America Noticias: Primera Edición: Local",
+          día: "05/11",
+          disponible: true
+        },
+        {
+          name: "6:30-6:35",
+          monto: 4000,
+          recaga: 4600,
+          programa: "America Noticias: Primera Edición: Local",
+          día: "05/11",
+          disponible: true
+        }
+      ],
       recarga: 4600,
       time: "5:30 - 07:00"
     },
     {
       monto: 4000,
       programa: "América Noticias Primera Edición",
-      publicidad: ["7:00-5:05", "7:30-7:35"],
+      publicidad: [
+        {
+          name: "7:00-5:05",
+          monto: 4000,
+          recaga: 4600,
+          programa: "América Noticias Primera Edición",
+          día: "05/11",
+          disponible: true
+        },
+        {
+          name: "7:30-7:35",
+          monto: 4000,
+          recaga: 4600,
+          programa: "América Noticias Primera Edición",
+          día: "05/11",
+          disponible: true
+        }
+      ],
       recarga: 4600,
       time: "07:00 - 08:00"
     },
     {
       monto: 1000,
       programa: "América Deportes",
-      publicidad: ["8:00-8:05"],
+      publicidad: [
+        {
+          name: "8:00-8:05",
+          monto: 1000,
+          recaga: 1000,
+          programa: "América Deportes",
+          día: "05/11",
+          disponible: true
+        }
+      ],
       recarga: 1000,
       time: "08:00 - 08:20"
     },
     {
       monto: 4000,
       programa: "América Noticias Primera Edición",
-      publicidad: ["8:30-8:35"],
+      publicidad: [
+        {
+          name: "8:30-8:35",
+          monto: 4000,
+          recaga: 4000,
+          programa: "América Noticias Primera Edición",
+          día: "05/11",
+          disponible: true
+        }
+      ],
       recarga: 4000,
       time: "08:20 - 09:00"
     },
     {
       monto: 1000,
       programa: "El Privilegio de Amar",
-      publicidad: ["9:00-9:05", "9:30-9:35"],
+      publicidad: [
+        {
+        name: "9:00-9:05",
+        monto: 1000,
+        recaga: 1000,
+        programa: "El Privilegio de Amar",
+        día: "05/11",
+        disponible: true
+      }, "9:30-9:35"],
       recarga: 1000,
       time: "09:00 - 10:00"
     },
