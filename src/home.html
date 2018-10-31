@@ -11,100 +11,124 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
 
 
   <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
-<div class="container d-flex h-100">
-  <div class="row align-self-center w-100">
-    <div class="col-6 mx-auto">
-       <button id="login" disabled>login</button> 
-        <button id="register">register</button> 
+  <div class="container d-flex h-100">
+    <div class="row align-self-center w-100">
+      <div class="col-6 mx-auto">
+        
+        <div class="jumbotron">
+         
+          <div class="register">
+            <div class="body-index">
+              <br>
+             
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <!-- <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email"> -->
+                  <input type="email" class="form-control"  placeholder=" Ingresa tu e-mail" id="userEmail">
 
-<div class="jumbotron">
-  <button><i class="fas fa-arrow-circle-left"></i></button>
-    <div class="register">
-        <div class="body-index">
-          <br>
-          <a class="w3-button" id="return">
-            <i class="far fa-arrow-alt-circle-left" style="font-size:25px;"></i>
-          </a>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Agencia</label>
+                  <!-- <input type="email" class="form-control" id="agencia" aria-describedby="emailHelp" placeholder="ingrese sua agencia"> -->
+                  <!-- <input type="email" placeholder=" Ingresa tu e-mail" class="userEmail"> -->
+                  <input type="text" placeholder="ingrese su agencia"  class="form-control"  id="userAgencia">
 
-          <h1 class="title-form">Registrate</h1>
-          <p>
-            <input type="email" placeholder=" Ingresa tu e-mail" class="userEmail">
-          </p>
-          <p>
-            <h6 id="mensajeErrorPassword"></h6>
-          </p>
-          <p>
-            <input type="password" placeholder=" Ingresa una contraseña" class="userPassword">
-          </p>
-          <p>
-            <h6 id="mensaje-error"></h6>
-          </p>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <!-- <input type="password"  id="password" placeholder="Password"> -->
+                  <input type="password" class="form-control" placeholder=" Ingresa una contraseña" id="userPassword">
 
-          <input type="text" placeholder="ingrese su agencia" id="userAgencia">
-          <p>
-            <input type="password" placeholder=" Repita la contraseña" class="userPasswordVerification">
-          </p>
-          <input type='text' id='idea'  placeholder="ingrese sus productos"/>
+                </div>
+                
+                <div class="form-group">
+                  <!-- <input type='text' id='idea' /> -->
+                  <p>productos</p>
+                  <input type="text" placeholder="ingrese sus productos"  class="form-control"  id="idea">
+<br>
+                  <input type='button' value='añadir' id='add' placeholder="productos"> 
+                  <br>
+                  <ul id='list'></ul>
+    
+                </div>
+                <a class="w3-button" id="return">
+              <i class="far fa-arrow-alt-circle-left" style="font-size:25px;"></i>
+            </a>
+                <input type='button' value='Registro' id="registers" placeholder="productos"> 
+    
+              </form>  
+             
+          </div>
+        </div>
+        <!-- iniciar sesion -->
+        <div class="login">
+            <form id="loggedOut" >
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <!-- <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email"> -->
+                  <input type="email" class="form-control"  placeholder=" Ingresa tu e-mail" id="userEmailLogin">
 
- <input type='button' value='add to list' id='add' placeholder="productos">
- <ul id='list'></ul>
-          <p>
-            <button class="buttonRegister">REGISTRARSE</button>
-          </p>
-          
+                </div>
+                
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <!-- <input type="password"  id="password" placeholder="Password"> -->
+                  <input type="password" class="form-control" placeholder=" Ingresa una contraseña" id="userPasswordLogin">
+
+                </div>
+                
+                <p>
+                    <input type='button' value='login'  class="buttonLogin" placeholder="productos"> 
+
+                    <!-- <button class="buttonLogin">INICIAR SESIÓN</button> -->
+                  </p>
+                  <br>
+                  <P class="text-2">¿No tienes una cuenta?</P>
+                  <p>
+                      <!-- <input type='button' value='Registro' id="registers" placeholder="productos">  -->
+                      <input type='button' value='REGISTRATE' class="buttonRegisterForm" placeholder="productos"> 
+
+                    <!-- <button class="buttonRegisterForm">REGISTRATE</button> -->
+                  </p>    
+              </form>  
+
+          <!-- <div class="body-index">
+            <br>
+            <br>
+            <h1 class="title-form"> Inicia sesión </h1>
+            <div id="loggedOut">
+              <p>
+                <input type="email" placeholder=" Ingresa tu e-mail " class="userEmailLogin">
+              </p>
+              <p>
+                <input type="password" placeholder=" Ingresa tu contraseña" class="userPasswordLogin">
+              </p>
+              <p>
+                <button class="buttonLogin">INICIAR SESIÓN</button>
+              </p>
+              <br>
+              <P class="text-2">¿No tienes una cuenta?</P>
+              <p>
+                <button class="buttonRegisterForm">REGISTRATE</button>
+              </p>
+              
+            </div>
+          </div> -->
         </div>
 
-        <div></div>
       </div>
-    <!-- <div class="registerForm">
- <input type="text" id="agencia" placeholder="ingrese su agencia">
- <!-- <input type="text" id=""> -->
- <!-- <br><br>
- <input type='text' id='idea'  placeholder="ingrese sus productos"/>
-
- <input type='button' value='add to list' id='add' placeholder="productos">
- <ul id='list'></ul>
-
-    </div> --> 
-    <!-- iniciar sesion -->
-    <div class="login">
-      <div class="body-index">
-        <br>
-        <br>
-        <h1 class="title-form"> Inicia sesión </h1>
-        <div id="loggedOut">
-          <p>
-            <input type="email" placeholder=" Ingresa tu e-mail " class="userEmailLogin">
-          </p>
-          <p>
-            <input type="password" placeholder=" Ingresa tu contraseña" class="userPasswordLogin">
-          </p>
-          <p>
-            <button class="buttonLogin">INICIAR SESIÓN</button>
-          </p>
-          <br>
-          <P class="text-2">¿No tienes una cuenta?</P>
-          <p>
-            <button class="buttonRegisterForm">REGISTRATE</button>
-          </p>
-          <p class="text-1">o
-            <br>Ingresa con:</p>
-
-        </div>
-      </div>
-    </div>
-      
     </div>
   </div>
-</div>
-</div>
+  </div>
 
 </body>
 <!-- Optional JavaScript -->
